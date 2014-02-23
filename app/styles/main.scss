@@ -72,6 +72,9 @@ body {
             border: 1px solid $very-light-green;
         }
     }
+    .verbal-cue {
+        font-size: 12px;
+    }
     .book-pages {
         position: absolute;
         margin-top: 60px;
@@ -80,6 +83,7 @@ body {
             color: green;
             font-weight: 400;
             font-size: 10px;
+            text-align: center;
         }
 
         .spread {
@@ -90,6 +94,8 @@ body {
             height: 293px;
             margin: 10px 0;
             &>div {
+                font-size: 16px;
+                font-weight: 400;
                 vertical-align: top;
                 // outline: 1px solid gray;
                 display: inline-block;
@@ -97,15 +103,36 @@ body {
                 margin: 0 -2px;
                 padding: 0px;
             }
+            .panel {
+                padding: 10px;
+                @include border-radius(3px);
+                height: 255px;
+                margin: 14px 14px 3px;
+                position: relative;
+            }
+            .page-left {
+                .panel {
+                    text-align: left;
+                }
+            }
             .page-right {
                 background: $dark-beige;
+                text-align: left;
                 .panel {
+                    .verbal-cue {
+                        font-weight: 200;
+                        text-align: center;
+                        margin: 40px 20px 20px;
+                        // font-size: 14px;
+                        color: rgb(224, 229, 219);
+                    }
                     background: $light-beige;
-                    @include border-radius(3px);
-                    height: 255px;
-                    margin: 14px 14px 3px;
+                    img {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 1px;
+                    }
                 }
-
             }
         }
     }
