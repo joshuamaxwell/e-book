@@ -16,6 +16,7 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <script src="bower_components/modernizr/modernizr.js"></script>
@@ -27,21 +28,23 @@
         <![endif]-->
 
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="navigation col-xs-3">
-                    <div class="list-group">
-                        <a class="list-group-item library" href="#">Library</a>
-                        <a class="list-group-item preview" href="#">Preview</a>
-                        <a class="list-group-item save" href="#">Save</a>
-                        <a class="list-group-item print" href="#">Print</a>
+        <div class="container-fluid">        
+                <div class="wrapper col-xs-12 text-center">
+                    <div class="library-container">
+                    <h1 class="lead">Library</h1>
+                        <div class="library-option col-xs-4">
+                            <span class="single-book-icon"><img src="images/one-book-icon.png"></span>
+                            <p>Goodnight</p>
+                        </div>
+                        <div class="library-option col-xs-4">
+                            <span class="stacked-book-icon"><img src="images/ten-books-icon.png"></span>
+                            <p>Let's Go to the Lake</p>
+                        </div>
+                        <div class="library-option col-xs-4">
+                            <span class="stacked-book-icon"><img src="images/ten-books-icon.png"></span>
+                            <p>Down by the Bay</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="jumbotron col-xs-9">
-                    <h1>'Allo, 'Allo!</h1>
-                    <p class="lead">Always a pleasure scaffolding your apps.</p>
-                    <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
                 </div>
 
             </div>
