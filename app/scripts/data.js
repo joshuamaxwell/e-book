@@ -25,43 +25,43 @@ var exampleBook = {
 var examplePages = [{
   pageNumber: 'cover', //this could be 'cover'
   dynamic: true,
-  copyText: '',
+  renderCopyText: _.template( '' ),
 },{
   pageNumber: 'b', //this could be 'cover'
   dynamic: true,
-  copyText: '',
+  renderCopyText: _.template( '' ),
 },{
   pageNumber: '1', //this could be 'cover'
   dynamic: true,
-  copyText: 'It is late.<br>It is time for bed.<br>It is time to go to bed.',
+  renderCopyText: _.template( 'It is late.<br>It is time for bed.<br>It is time to go to bed.' ),
 },{
   pageNumber: '2', //this could be 'cover'
   dynamic: true,
-  copyText: '<%= child %> is funny.<br>Do not play, <%= child %>. <br>It is time to go to bed.',
+  renderCopyText: _.template( '<%= child %> is funny.<br>Do not play, <%= child %>. <br>It is time to go to bed.' ),
 },{
   pageNumber: '3', //this could be 'cover'
   dynamic: true,
-  copyText: 'Come <%= child %>.<br>It is time.<br>It is time to wash.',
+  renderCopyText: _.template( 'Come <%= child %>.<br>It is time.<br>It is time to wash.' ),
 },{
   pageNumber: '4', //this could be 'cover'
   dynamic: true,
-  copyText: 'Good, <%= child %>.<br>You can help.<br>Find the top.',
+  renderCopyText: _.template( 'Good, <%= child %>.<br>You can help.<br>Find the top.' ),
 },{
   pageNumber: '5', //this could be 'cover'
   dynamic: true,
-  copyText: 'Good <%= child %>.<br>Jump in bed.<br>You are good..',
+  renderCopyText: _.template( 'Good <%= child %>.<br>Jump in bed.<br>You are good..' ),
 },{
   pageNumber: '6', //this could be 'cover'
   dynamic: true,
-  copyText: 'It is time.<br>It is time to read.<br>It is good to read.',
+  renderCopyText: _.template( 'It is time.<br>It is time to read.<br>It is good to read.' ),
 },{
   pageNumber: '7', //this could be 'cover'
   dynamic: true,
-  copyText: 'It is time.<br>It is time to go to sleep.<br>You are good.',
+  renderCopyText: _.template( 'It is time.<br>It is time to go to sleep.<br>You are good.' ),
 },{
   pageNumber: '8', //this could be 'cover'
   dynamic: true,
-  copyText: 'I love you, <%= child %>.<br>I love you, <%= parent %>.',
+  renderCopyText: _.template( 'I love you, <%= child %>.<br>I love you, <%= parent %>.' ),
 }]
 
 
@@ -112,29 +112,32 @@ var examplePictures = [{
 
 var examplePictureSlots = [{
     verbalCue: 'child yawning',
-    pageNumber: ['cover','b']
+    pageNumber: 'cover'
   },{
     verbalCue: 'child playing',
-    pageNumber: ['1']
+    pageNumber: 'b'
+  },{    
+    verbalCue: 'child playing',
+    pageNumber: '1'
   },{
     verbalCue: 'child being silly in bathroom',
-    pageNumber: ['2']
+    pageNumber: '2'
   },{
     verbalCue: 'getting ready for bathtime', 
-    pageNumber: ['3']
+    pageNumber: '3'
   },{
     verbalCue: "child laying out next day's clothes", 
-    pageNumber: ['4']
+    pageNumber: '4'
   },{
     verbalCue: 'child crawling into bed',     
-    pageNumber: ['5']
+    pageNumber: '5'
    },{
     verbalCue: 'reading in bed',      
-    pageNumber: ['6']
+    pageNumber: '6'
    },{
     verbalCue: 'goodnight kiss',      
-    pageNumber: ['7']
+    pageNumber: '7'
    },{
     verbalCue: 'turning off lights',              
-    pageNumber: ['8']
+    pageNumber: '8'
   }]

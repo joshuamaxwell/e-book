@@ -42,67 +42,9 @@
             </div>
 
             <div class="jumbotron col-xs-9">
-                <form class="form-horizontal book-set-up" role="form">
-                  <div class="form-group">
-                    <label class="control-label col-xs-4 col-xs-offset-1" for="character1">Parent's Name</label>
-                    <div class="col-xs-6">
-                      <input type="text" class="form-control" id="character1" placeholder="Parent's Name">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label col-xs-4 col-xs-offset-1" for="character1">Child's Name</label>
-                    <div class="col-xs-6">
-                      <input type="text" class="form-control" id="character1" placeholder="Childs's Name">
-                    </div>
-                  </div>
-                  <button type="button" class="btn btn-default btn-md choose-pics">Choose Pictures</button>
-                </form>
+                
                 <div class="book-pages">
-                    <div class="spread">
-                        <div class="page-left">
-                            <div class="panel">
-                                <div class="page-copy">Come Pam.<br>It is time.<br>It is time to wash.</div>
-                            </div>
-                            <div class="page-number">1</div>
-                        </div>
-                        <div class="page-right">
-                            <div class="panel">
-                                <div class="verbal-cue">Mom running water for bath.</div>
-                                <img src="/images/add-a-photo-img.png">
-                            </div>
-                            <div class="page-number">2</div>
-                        </div>
-                    </div>
-                    <div class="spread">
-                        <div class="page-left">
-                            <div class="panel">
-                                <div class="page-copy">Come Pam.<br>It is time.<br>It is time to wash.</div>
-                            </div>
-                            <div class="page-number">1</div>
-                        </div>
-                        <div class="page-right">
-                            <div class="panel">
-                                <div class="verbal-cue">Mom running water for bath.</div>
-                                <img src="/images/add-a-photo-img.png">
-                            </div>
-                            <div class="page-number">2</div>
-                        </div>
-                    </div>
-                    <div class="spread">
-                        <div class="page-left">
-                            <div class="panel">
-                                <div class="page-copy">Come Pam.<br>It is time.<br>It is time to wash.</div>
-                            </div>
-                            <div class="page-number">1</div>
-                        </div>
-                        <div class="page-right">
-                            <div class="panel">
-                                <div class="verbal-cue">Mom running water for bath.</div>
-                                <img src="/images/add-a-photo-img.png">
-                            </div>
-                            <div class="page-number">2</div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -110,19 +52,34 @@
         <script type="text/template" id="page-spread-template">
             <div class="page-left">
                 <div class="panel">
-                    <div class="page-copy"><%= copyText %></div>
+                    <div class="page-copy"><%=  this.model.get('copyText') %></div>
                 </div>
-                <div class="page-number"><%= pageNumber %></div>
+                <div class="page-number"><%= this.model.get('pageNumber') %></div>
             </div>
             <div class="page-right">
                 <div class="panel">
-                    <div class="verbal-cue"><%= verbalCue %></div>
-                    <img src="<%= imgUrl %>">
+                    <div class="verbal-cue"><%= this.model.pictureSlots.get('verbalCue') %></div>
+                    <img src="<%= this.model.pictureSlots.get('imgUrl') %>">
                 </div>
-                <div class="page-number"><%= pageNumber + 1 %></div>
+                <div class="page-number"><%= this.model.get('pageNumber') + 1 %></div>
             </div>
         </script>
 
+        <script type="text/template" id="book-set-up">
+            <div class="form-group">
+              <label class="control-label col-xs-4 col-xs-offset-1" for="character1">Parent Name</label>
+              <div class="col-xs-6">
+                <input type="text" class="form-control parent-name-input" id="character1" placeholder="Parent Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-xs-4 col-xs-offset-1" for="character1">Child Name</label>
+              <div class="col-xs-6">
+                <input type="text" class="form-control child-name-input" id="character1" placeholder="Child Name">
+              </div>
+            </div>
+            <button type="button" class="btn btn-default btn-md choose-pics">Choose Pictures</button>
+        </script>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -160,6 +117,8 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/page-view.js"></script>
+        <script src="scripts/book-view.js"></script>
         <script src="scripts/page.js"></script>
         <script src="scripts/book.js"></script>
         <script src="scripts/picture-slot.js"></script>
