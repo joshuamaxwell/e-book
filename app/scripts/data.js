@@ -86,25 +86,25 @@ var examplePages = [{
 
 var examplePictures = [{
   caption: 'picture of Amara brushing teeth',
-  url: '/images/brushing-teeth.JPG',
+  imgUrl: '/images/brushing-teeth.JPG',
 },{
   caption: 'picture of kids reading book',
-  url: '/images/bedtime-story.JPG',
+  imgUrl: '/images/bedtime-story.JPG',
 },{
   caption: 'bedtime kisses',
-  url: '/images/bedtime-kiss.JPG',
+  imgUrl: '/images/bedtime-kiss.JPG',
 },{
   caption: 'picture of kid yawning',
-  url: '/images/child-yawn.JPG',
+  imgUrl: '/images/child-yawn.JPG',
 },{
   caption: 'laying out tomorrows clothes',
-  url: '/images/laying-out-clothes.JPG',
+  imgUrl: '/images/laying-out-clothes.JPG',
 },{
   caption: 'turning lights off',
-  url: '/images/lights-off.JPG',
+  imgUrl: '/images/lights-off.JPG',
 },{
   caption: 'being silly in the bathroom',
-  url: '/images/silly-bathroom.JPG',        
+  imgUrl: '/images/silly-bathroom.JPG',        
 }]
 
 
