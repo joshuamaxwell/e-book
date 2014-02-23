@@ -83,6 +83,67 @@ body {
 }
 
 
+// Modal Styling
+.modal-content {
+    background-color: #0FA38B;
+    color: white;
+    padding: 0px 10px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+    margin-top: 0px;
+
+    .series-title h2 {
+        line-height: 40px;
+        font-size: 25px;
+    }
+
+    .series-summary {
+        margin-top: 20px;
+        line-height: 18px;
+        font-size: 17px;
+        letter-spacing: 1px;
+        padding-left: 15px;
+    }
+
+    .series-reader-level {
+        line-height: 18px;
+        margin-top: 10px;
+        color: #e5e5e5;
+        letter-spacing: 2px;
+    }
+
+    .series-view-btn {
+        color: #555555;
+        background-color: white;
+        border: 1px solid #dddddd;
+
+        &:hover {
+            background-color: whitesmoke;
+        }
+    }
+
+    .modal-buttons {
+        margin-top: 10px;
+    }
+    .personalize {
+        background-color: rgb(41, 197, 54);
+        color: white;
+        border: 1px solid #209420;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        &:hover {
+            background-color: rgb(84, 214, 95);
+        }
+    }
+}
+
 
 
 

@@ -33,7 +33,7 @@
                     <div class="library-container">
                     <h1 class="lead">Library</h1>
                         <div class="library-option col-xs-4">
-                            <span class="single-book-icon"><img src="images/one-book-icon.png"></span>
+                            <span class="single-book-icon"><img src="images/one-book-icon.png" data-toggle="modal" data-target="#myModal"></span>
                             <p>Goodnight</p>
                         </div>
                         <div class="library-option col-xs-4">
@@ -47,6 +47,35 @@
                     </div>
                 </div>
 
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content row">
+                  <!-- <div class="modal-header"> -->
+                    
+                    
+                  <!-- </div> -->
+                  <div class="modal-body library-option col-xs-4">
+                        <span class="single-book-icon"><img src="images/one-book-icon.png" data-toggle="modal" data-target="#myModal"></span>
+                  </div>
+                  <div class="modal-footer  col-xs-8">
+                    <div class="series-title">
+                        <h2>Goodnight</h2>
+                    </div>
+                    <div class="series-summary">
+                        <span>The Goodnight Series consists on one story - the story of going to bed. You and your kids will have fun as you walk through your bedtime routine, snapping pics along way.</span>
+                    </div>
+                    <div class="series-reader-level">
+                        <span>Reading Level 1</span>
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="button" class="btn btn-lg btn-primary series-view-btn" data-dismiss="modal">Back to Library</button>
+                        <a href="editscreen.html"><button type="button" class="btn btn-lg btn-primary series-view-btn personalize">Personalize</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
         </div>
