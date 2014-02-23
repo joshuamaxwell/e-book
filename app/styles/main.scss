@@ -2,10 +2,12 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'compass/reset';
-
-$background-green: rgb(65, 145, 132);
+$darker-green: rgb(4, 122, 108);
+$very-light-green: rgb(186, 218, 212);
+$background-green: rgb(17, 150, 134);
 body {
-
+    background: $background-green;
+    font-family: 'Lato', sans-serif;
 }
 
 .browsehappy {
@@ -15,27 +17,41 @@ body {
     padding: 0.2em 0;
 }
 
-
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
 .navigation {
-    background: $background-green;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    padding-left: 0;
 
     .list-group {
-        background: $background-green;
+        .list-group-item {
+            text-align: center;
+            height: 38px;
+            width: 152px;
+            font-size: 19px;
+            color: $very-light-green;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgb(39, 156, 141);
+            border-radius: 0;
+            &.library {
+                height: 84px;
+                font-weight: 400;
+                padding: 30px 0px;
+            }
+        }
     }
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-    background: $background-green;
+    background: transparent;
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
     .btn {
         font-size: 21px;
         padding: 14px 24px;
+    }
+    label {
+        font-size: 14px;
     }
 }
 
