@@ -58,10 +58,10 @@
             </div>
             <div class="page-right">
                 <div class="panel">
-                    <div class="verbal-cue"><%= this.model.pictureSlots.get('verbalCue') %></div>
-                    <img src="<%= this.model.pictureSlots.get('imgUrl') %>">
+                    <div class="verbal-cue"><%= this.model.get('verbalCue') %></div>
+                    <img src="<%= this.model.get('imgUrl') %>">
                 </div>
-                <div class="page-number"><%= this.model.get('pageNumber') + 1 %></div>
+                <div class="page-number"><%= this.model.get('pageNumber')  %></div>
             </div>
         </script>
 
@@ -121,7 +121,6 @@
         <script src="scripts/book-view.js"></script>
         <script src="scripts/page.js"></script>
         <script src="scripts/book.js"></script>
-        <script src="scripts/picture-slot.js"></script>
         <script src="scripts/picture.js"></script>
         <script src="scripts/data.js"></script>
         <script src="scripts/main.js"></script>

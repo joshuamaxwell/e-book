@@ -14,36 +14,19 @@ sampleBook.pages.each(function(page){
 
 sampleBook.pictures.add(examplePictures);
 
-sampleBook.pages.each(function(page){
-
-  var results = _.filter(examplePictureSlots, function(slot){ 
-    // console.log(page.get('pageNumber'));
-      return slot.pageNumber == page.get('pageNumber')
-    });
-
-  _.each(results, function(pictureSlot){
-  page.pictureSlots.add(pictureSlot);
-  })
-  // console.log(page);
-})
 
 $('.parent-name-input').on('keyup', function(){
   console.log('keyup in parent', this);
   var parentName = this.value;
-  console.log(parentName);
-  console.log('was', sampleBook.get('characters').parent.name); 
-  sampleBook.set({
-    characters: {
-      parent: {
-        name: parentName
-      }
-    }
-  });
+  $('.parent').html(parentName);
   console.log('now is', sampleBook.get('characters').parent.name); 
-})
+  });
+
 
 $('.child-name-input').on('keyup', function(){
   console.log('keyup in child');
+  var childName = this.value;
+  $('.child').html(childName);
 })
 
 // console.log(sampleBook);

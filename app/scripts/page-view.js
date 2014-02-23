@@ -5,7 +5,8 @@ var PageView = Backbone.View.extend({
     $('.book-pages').append( this.el );
     this.render();
     console.log('the pageview collection is:  ', this.collection);
-    this.listenTo(this.collection, 'change:all', this.render());
+    this.listenTo(this.collection, 'change', this.render());
+    this.listenTo(this.model, 'change add', this.render());
   },
 
 
