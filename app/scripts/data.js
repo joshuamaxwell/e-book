@@ -84,41 +84,57 @@ var examplePages = [{
 
 
 
-var examplePicture1 = {
-  caption: 'picture of violet brushing teeth',
-  url: 'https://lh4.googleusercontent.com/-YhaGQsz8c-Q/UsB0-lublhI/AAAAAAAA-0I/MU8UP4p5TFw/w1035-h693-no/DSC02140.JPG',
-}
-
-var examplePicture2 = {
+var examplePictures = [{
+  caption: 'picture of Amara brushing teeth',
+  imgUrl: '/images/brushing-teeth.JPG',
+},{
   caption: 'picture of kids reading book',
-  url: 'https://lh6.googleusercontent.com/-4NUZu32mCu4/UsB1gV86O1I/AAAAAAAA-3A/tOoAOkiONQM/w1035-h693-no/DSC02117.JPG',
-}
+  imgUrl: '/images/bedtime-story.JPG',
+},{
+  caption: 'bedtime kisses',
+  imgUrl: '/images/bedtime-kiss.JPG',
+},{
+  caption: 'picture of kid yawning',
+  imgUrl: '/images/child-yawn.JPG',
+},{
+  caption: 'laying out tomorrows clothes',
+  imgUrl: '/images/laying-out-clothes.JPG',
+},{
+  caption: 'turning lights off',
+  imgUrl: '/images/lights-off.JPG',
+},{
+  caption: 'being silly in the bathroom',
+  imgUrl: '/images/silly-bathroom.JPG',        
+}]
 
-var examplePicture3 = {
-  caption: 'picture of kids reading book',
-  url: 'https://lh3.googleusercontent.com/-eqhI1CO4yJw/UsDFpEGLLsI/AAAAAAABE3I/JnOTdzGqCq0/w640-h480-no/20131229_195747_Tyler+St.jpg',
-}
-
-var examplePictures = [examplePicture1, examplePicture2]
 
 
 
 var examplePictureSlots = [{
     verbalCue: 'child yawning',
+    pageNumber: ['cover','b']
   },{
     verbalCue: 'child playing',
+    pageNumber: ['1']
   },{
     verbalCue: 'child being silly in bathroom',
+    pageNumber: ['2']
   },{
     verbalCue: 'getting ready for bathtime', 
+    pageNumber: ['3']
   },{
     verbalCue: "child laying out next day's clothes", 
+    pageNumber: ['4']
   },{
     verbalCue: 'child crawling into bed',     
+    pageNumber: ['5']
    },{
     verbalCue: 'reading in bed',      
+    pageNumber: ['6']
    },{
     verbalCue: 'goodnight kiss',      
+    pageNumber: ['7']
    },{
     verbalCue: 'turning off lights',              
+    pageNumber: ['8']
   }]
