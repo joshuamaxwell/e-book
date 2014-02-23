@@ -3,20 +3,33 @@ console.log('We can do this!!!!');
 var books = new BooksCollection(exampleBook);
 
 var sampleBook = books.models[0];
+new BookView({model: sampleBook});
 
 sampleBook.pages.add(examplePages);
-sampleBook.pictures.add(examplePictures);
 
 sampleBook.pages.each(function(page){
-  var results = _.filter(examplePictureSlots, function(slot){ 
-      return slot.pageNumber == page.get('pageNumber')});
-  console.log(page.get('pageNumber'));
-  _.each(results, function(pictureSlot){
-  this.pictureSlots.add(pictureSlot);
-  })
+  new PageView({model: page, collection: sampleBook});
+  // console.log(page);
 })
 
-console.log(sampleBook);
+sampleBook.pictures.add(examplePictures);
+
+
+$('.parent-name-input').on('keyup', function(){
+  console.log('keyup in parent', this);
+  var parentName = this.value;
+  $('.parent').html(parentName);
+  console.log('now is', sampleBook.get('characters').parent.name); 
+  });
+
+
+$('.child-name-input').on('keyup', function(){
+  console.log('keyup in child');
+  var childName = this.value;
+  $('.child').html(childName);
+})
+
+// console.log(sampleBook);
 
 // var firstPage = sampleBook.pages.first()
 
