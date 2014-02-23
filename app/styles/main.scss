@@ -5,6 +5,8 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 $background-green: rgb(65, 145, 132);
 body {
+    background-color: #0FA38B;
+    font-family: 'Lato', sans-serif;
 
 }
 
@@ -39,6 +41,46 @@ body {
     }
 }
 
+.library-container {
+    margin-top: 5%;
+    color: white;
+
+    .lead {
+        margin-bottom: 50px;
+        font-size: 20px;
+        font-family:'Lato', sans-serif;
+        font-weight: 300;
+    }
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    .not-purchased {
+        filter: grayscale(100%);
+
+    }
+
+    .single-book-icon img {
+        width: 90px;
+    }
+
+    .stacked-book-icon img {
+        width: 111px;
+        margin-top: -13px;
+
+    }
+
+    .library-option {
+
+        p { 
+            font-family:'Lato', sans-serif;
+            font-weight: 300; 
+        }
+
+    }
+
+}
 
 
 
