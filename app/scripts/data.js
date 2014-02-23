@@ -5,31 +5,84 @@ var exampleSeries = {
 var exampleBook = {
   readingLevel: '300',
   bookName: 'Time for Bed',
-  options: [{
-    name: 'Bobby',
-    role: 'child1',
-    gender: 'male'
-  },{
-    name: 'Mommy',
-    role: 'parental1',
-    gender: 'female'
-  },{
-    name: 'Spartanburg',
-    role: 'location'
-  }]
+  characters: {
+    child: {
+      name: 'Bobby',
+      gender: 'male'
+   },
+    parent: {      
+      name: 'Mommy',
+      gender: 'female'
+    }
+  }      
 }
 
-var examplePage1 = {
+
+
+
+
+
+var examplePages = [{
+  pageNumber: 'cover', //this could be 'cover'
+  dynamic: true,
+  copyText: '',
+},{
+  pageNumber: 'b', //this could be 'cover'
+  dynamic: true,
+  copyText: '',
+},{
   pageNumber: '1', //this could be 'cover'
-  copyText: '<%= child1 %> brushes her teeth with <%= parental1 %> watching. In <%= location %>.',
-}
-
-var examplePage2 = {
+  dynamic: true,
+  copyText: 'It is late.<br>It is time for bed.<br>It is time to go to bed.',
+},{
   pageNumber: '2', //this could be 'cover'
-  copyText: '<%= child1 %> reads a book with <%= parental1 %> watching. In <%= location %>.',
-}
+  dynamic: true,
+  copyText: '<%= child %> is funny.<br>Do not play, <%= child %>. <br>It is time to go to bed.',
+},{
+  pageNumber: '3', //this could be 'cover'
+  dynamic: true,
+  copyText: 'Come <%= child %>.<br>It is time.<br>It is time to wash.',
+},{
+  pageNumber: '4', //this could be 'cover'
+  dynamic: true,
+  copyText: 'Good, <%= child %>.<br>You can help.<br>Find the top.',
+},{
+  pageNumber: '5', //this could be 'cover'
+  dynamic: true,
+  copyText: 'Good <%= child %>.<br>Jump in bed.<br>You are good..',
+},{
+  pageNumber: '6', //this could be 'cover'
+  dynamic: true,
+  copyText: 'It is time.<br>It is time to read.<br>It is good to read.',
+},{
+  pageNumber: '7', //this could be 'cover'
+  dynamic: true,
+  copyText: 'It is time.<br>It is time to go to sleep.<br>You are good.',
+},{
+  pageNumber: '8', //this could be 'cover'
+  dynamic: true,
+  copyText: 'I love you, <%= child %>.<br>I love you, <%= parent %>.',
+}]
 
-var examplePages = [examplePage1, examplePage2];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var examplePicture1 = {
   caption: 'picture of violet brushing teeth',
@@ -46,15 +99,26 @@ var examplePicture3 = {
   url: 'https://lh3.googleusercontent.com/-eqhI1CO4yJw/UsDFpEGLLsI/AAAAAAABE3I/JnOTdzGqCq0/w640-h480-no/20131229_195747_Tyler+St.jpg',
 }
 
-
 var examplePictures = [examplePicture1, examplePicture2]
 
+
+
 var examplePictureSlots = [{
-    verbalCue: 'child reading book',
+    verbalCue: 'child yawning',
   },{
-    verbalCue: 'maybe another picture here',
+    verbalCue: 'child playing',
   },{
-    verbalCue: 'child brushing teeth',
+    verbalCue: 'child being silly in bathroom',
   },{
-    verbalCue: 'child in doorway of bathroom', //potty time
+    verbalCue: 'getting ready for bathtime', 
+  },{
+    verbalCue: "child laying out next day's clothes", 
+  },{
+    verbalCue: 'child crawling into bed',     
+   },{
+    verbalCue: 'reading in bed',      
+   },{
+    verbalCue: 'goodnight kiss',      
+   },{
+    verbalCue: 'turning off lights',              
   }]
