@@ -52,17 +52,23 @@ body {
         font-weight: 300;
     }
 
-
-
     img {
         margin-bottom: 20px;
     }
+
+    .not-purchased {
+        filter: grayscale(100%);
+
+    }
+
     .single-book-icon img {
         width: 90px;
     }
+
     .stacked-book-icon img {
         width: 111px;
         margin-top: -13px;
+
     }
 
     .library-option {
