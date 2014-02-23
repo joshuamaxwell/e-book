@@ -80,26 +80,6 @@ var examplePages = [{
   renderCopyText: _.template( 'I love you, <span class="child"><%= child %></span>.<br>I love you, <span class="parent"><%= parent %></span>.' ),
 }]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var examplePictures = [{
   caption: 'picture of Amara brushing teeth',
   imgUrl: '/images/brushing-teeth.JPG',
