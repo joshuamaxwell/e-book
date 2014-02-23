@@ -2,12 +2,15 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'compass/reset';
-
-$background-green: rgb(65, 145, 132);
+@import 'compass/css3';
+$darker-green: rgb(4, 122, 108);
+$very-light-green: rgb(186, 218, 212);
+$background-green: rgb(17, 150, 134);
+$dark-beige: rgb(234, 239, 229);
+$light-beige: rgb(247, 247, 245);
 body {
     background-color: #0FA38B;
     font-family: 'Lato', sans-serif;
-
 }
 
 .browsehappy {
@@ -17,27 +20,121 @@ body {
     padding: 0.2em 0;
 }
 
-
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
 .navigation {
-    background: $background-green;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    padding-left: 0;
+    position: relative;
 
     .list-group {
-        background: $background-green;
+        .list-group-item {
+            text-align: center;
+            height: 38px;
+            width: 152px;
+            font-size: 19px;
+            color: $very-light-green;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgb(39, 156, 141);
+            border-radius: 0;
+            &.library {
+                height: 84px;
+                font-weight: 400;
+                padding: 30px 0px;
+            }
+        }
     }
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-    background: $background-green;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: transparent;
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    overflow-y: scroll;
+    height: 320px; //unless there's better way to max height of screen
     .btn {
-        font-size: 21px;
-        padding: 14px 24px;
+ 
+    }
+    .book-set-up {
+        position: static;
+        label {
+            font-size: 15px;
+            color: $very-light-green;
+            line-height: 34px;
+        }
+        .choose-pics {
+            background-color: $darker-green;
+            color: $very-light-green;
+            font-weight: 300;
+            border: 1px solid $very-light-green;
+        }
+    }
+    .verbal-cue {
+        font-size: 12px;
+    }
+    .book-pages {
+        position: absolute;
+        margin-top: 60px;
+        background: transparent;
+        .page-number {
+            color: green;
+            font-weight: 400;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .spread {
+            @include border-radius(3px);
+            overflow: hidden;
+            background: white;
+            width: 380px;
+            height: 293px;
+            margin: 10px 0;
+            &>div {
+                font-size: 16px;
+                font-weight: 400;
+                vertical-align: top;
+                // outline: 1px solid gray;
+                display: inline-block;
+                width: 50%;
+                margin: 0 -2px;
+                padding: 0px;
+            }
+            .panel {
+                padding: 10px;
+                @include border-radius(3px);
+                height: 255px;
+                margin: 14px 14px 3px;
+                position: relative;
+            }
+            .page-left {
+                .panel {
+                    text-align: left;
+                }
+            }
+            .page-right {
+                background: $dark-beige;
+                text-align: left;
+                .panel {
+                    .verbal-cue {
+                        font-weight: 200;
+                        text-align: center;
+                        margin: 40px 20px 20px;
+                        // font-size: 14px;
+                        color: rgb(224, 229, 219);
+                    }
+                    background: $light-beige;
+                    img {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 1px;
+                    }
+                }
+            }
+        }
     }
 }
 
