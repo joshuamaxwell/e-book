@@ -9,7 +9,7 @@ $background-green: rgb(17, 150, 134);
 $dark-beige: rgb(234, 239, 229);
 $light-beige: rgb(247, 247, 245);
 body {
-    background: $background-green;
+    background-color: #0FA38B;
     font-family: 'Lato', sans-serif;
 }
 
@@ -138,6 +138,46 @@ body {
     }
 }
 
+.library-container {
+    margin-top: 5%;
+    color: white;
+
+    .lead {
+        margin-bottom: 50px;
+        font-size: 20px;
+        font-family:'Lato', sans-serif;
+        font-weight: 300;
+    }
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    .not-purchased {
+        filter: grayscale(100%);
+
+    }
+
+    .single-book-icon img {
+        width: 90px;
+    }
+
+    .stacked-book-icon img {
+        width: 111px;
+        margin-top: -13px;
+
+    }
+
+    .library-option {
+
+        p { 
+            font-family:'Lato', sans-serif;
+            font-weight: 300; 
+        }
+
+    }
+
+}
 
 
 
