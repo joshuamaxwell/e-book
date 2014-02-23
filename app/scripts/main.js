@@ -1,26 +1,36 @@
 console.log('We can do this!!!!');
 
 var books = new BooksCollection(exampleBook);
-console.log(books);
 
-var firstBook = books.models[0];
+var sampleBook = books.models[0];
 
-firstBook.pages.add(examplePages);
-firstBook.pictures.add(examplePictures);
+sampleBook.pages.add(examplePages);
+sampleBook.pictures.add(examplePictures);
 
-var firstPage = firstBook.pages.first()
-
-firstPage.pictureSlots.add(examplePictureSlots[0]);
-firstPage.pictureSlots.add(examplePictureSlots[1]);
-
-var firstPictureSlot = firstPage.pictureSlots.first();
-
-console.log(firstPictureSlot.get('verbalCue'));
-
-console.log(firstBook.pictures.first());
-
-firstPictureSlot.set({
-  pictureId: firstBook.pictures.first().cid
+sampleBook.pages.each(function(page){
+  var results = _.filter(examplePictureSlots, function(slot){ 
+      return slot.pageNumber == page.get('pageNumber')});
+  console.log(page.get('pageNumber'));
+  _.each(results, function(pictureSlot){
+  this.pictureSlots.add(pictureSlot);
+  })
 })
 
-console.log(firstPictureSlot.get('pictureId'));
+console.log(sampleBook);
+
+// var firstPage = sampleBook.pages.first()
+
+// firstPage.pictureSlots.add(examplePictureSlots[0]);
+// firstPage.pictureSlots.add(examplePictureSlots[1]);
+
+// var firstPictureSlot = firstPage.pictureSlots.first();
+
+// console.log(firstPictureSlot.get('verbalCue'));
+
+// console.log(sampleBook.pictures.first());
+
+// firstPictureSlot.set({
+//   pictureId: sampleBook.pictures.first().cid
+// })
+
+// console.log(firstPictureSlot.get('pictureId'));
