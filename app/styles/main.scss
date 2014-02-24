@@ -130,9 +130,11 @@ body {
                         // font-size: 14px;
                         color: rgb(224, 229, 219);
                     }
+                    overflow: hidden;
                     background: $light-beige;
                     img {
                         position: absolute;
+                        width: 170px;
                         bottom: 10px;
                         left: 1px;
                     }

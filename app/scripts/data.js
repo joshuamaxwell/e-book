@@ -7,26 +7,25 @@ var exampleBook = {
   bookName: 'Time for Bed',
   characters: {
     child: {
-      name: 'Character2',
+      name: 'Your child',
       gender: 'male'
    },
     parent: {      
-      name: 'Character1',
+      name: 'the parent',
       gender: 'female'
     }
   }      
 }
 
-
 var examplePages = [{
   pageNumber: '1', 
-  imgUrl: '/images/add-a-photo-img.png',
+  imgUrl: '/images/book-photos/child-yawn.jpg',
   verbalCue: 'child being silly in bathroom',
   dynamic: true,
   renderCopyText: _.template( '<span class="child"><%= child %></span> is funny.<br>Do not play, <span class="child"><%= child %></span>. <br>It is time to go to bed.' ),
 },{
   pageNumber: '3', 
-  imgUrl: '/images/add-a-photo-img.png',
+  imgUrl: '/images/book-photos/silly-bathroom.jpg',
   verbalCue: 'getting ready for bathtime', 
   dynamic: true,
   renderCopyText: _.template( 'Come <span class="child"><%= child %></span>.<br>It is time.<br>It is time to wash.' ),
