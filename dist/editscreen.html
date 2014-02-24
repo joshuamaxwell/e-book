@@ -11,7 +11,7 @@
                     <div class="verbal-cue"><%= this.model.get('verbalCue') %></div>
                     <img src="<%= this.model.get('imgUrl') %>">
                 </div>
-                <div class="page-number"><%= this.model.get('pageNumber') + 1 %></div>
+                <div class="page-number"><%= this.model.get('pageNumber').parseInt() + 1 %></div>
             </div></script><script type=text/template id=book-set-up><div class="form-group">
               <label class="control-label col-xs-4 col-xs-offset-1" for="character1">Parent Name</label>
               <div class="col-xs-6">
